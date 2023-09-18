@@ -11,7 +11,7 @@
 
 int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	char *line = NULL, **cmd_args;
+	char *line = NULL, **cmd_args == NULL;
 	size_t len = 0;
 	ssize_t bytes_read = 0;
 
@@ -24,7 +24,8 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		{
 			printf("Exiting shell....\n");
 			/** Error function with exit here*/
-			break;
+			free(line);
+			exit(1);
 		}
 		cmd_args = parse_str(line, ' ');
 		if (cmd_args)
