@@ -8,6 +8,7 @@ int built_ins(char *command)
 {
 	if (!command)
 		return (-1);
+	/** If list gets too long, use function pointers and arrays */
 
 	if (strcmp("exit", command) == 0)
 	{

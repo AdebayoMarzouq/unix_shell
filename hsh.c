@@ -14,6 +14,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	char *line = NULL;
 	size_t len = 0;
 	ssize_t bytes_read = 0;
+	int i;
 
 	do
 	{
@@ -30,6 +31,9 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		exec(argv);
 	} while (1);
 	/** Free 2D array here */
+	i = 0;
+	while (argv[i])
+		free(argv[i]);
 	free(argv);
 	free(line);
 	return (0);
