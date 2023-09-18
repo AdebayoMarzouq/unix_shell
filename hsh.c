@@ -29,8 +29,11 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		cmd_args = parse_str(line, ' ');
 		if (cmd_args)
 		{
-			exec(cmd_args);
-			free2DArray(cmd_args);
+			if (check_builtin(cmd_args[0]))
+			{
+				exec(cmd_args);
+				free2DArray(cmd_args);
+			}
 		}
 		else
 			puts("Error: could not parse string");

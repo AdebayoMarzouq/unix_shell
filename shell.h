@@ -17,7 +17,9 @@ void exec(char **args);
 char *_getenv(const char *name);
 int build_path(char **new_str, char *path, char *name);
 int run_command(char *command, char **args, char **env_vars);
-int built_ins(char *command);
+int check_builtin(char *command);
 void free2DArray(char **arr);
+int make_exit(void);
+int print_env(void);
 
 #endif

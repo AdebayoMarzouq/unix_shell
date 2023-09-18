@@ -4,25 +4,18 @@
  *
  */
 
-int built_ins(char *command)
+int make_exit(void)
 {
-	if (!command)
-		return (-1);
-	/** If list gets too long, use function pointers and arrays */
+	printf("Exiting.......");
+	return (0);
+}
 
-	if (strcmp("exit", command) == 0)
-	{
-		/** run exit here */
-		puts("exit command");
-		return (0);
-	}
+/**
+ *
+*/
 
-	if (strcmp("env", command) == 0)
-	{
-		/** print env vars here */
-		puts("env command");
-		return (0);
-	}
-
-	return (-1);
+int print_env(void)
+{
+	printf("Printing env......");
+	return (0);
 }
