@@ -32,8 +32,8 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 			if (check_builtin(cmd_args[0]))
 			{
 				exec(cmd_args);
-				free2DArray(cmd_args);
 			}
+			free2DArray(cmd_args);
 		}
 		else
 			puts("Error: could not parse string");
