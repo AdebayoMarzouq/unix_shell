@@ -25,16 +25,16 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		{
 			printf("Exiting shell....\n");
 			/** Error function with exit here*/
+			i = 0;
+			while (argv[i])
+				free(argv[i]);
+			free(argv);
+			free(line);
 			exit(1);
 		}
 		parse_str(line, ' ', &argv, &argc);
 		exec(argv);
 	} while (1);
 	/** Free 2D array here */
-	i = 0;
-	while (argv[i])
-		free(argv[i]);
-	free(argv);
-	free(line);
 	return (0);
 }
