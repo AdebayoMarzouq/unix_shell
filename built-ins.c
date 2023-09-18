@@ -2,12 +2,10 @@
 
 /**
  *
-*/
+ */
 
 int built_ins(char *command)
 {
-	int settings;
-
 	if (!command)
 		return (-1);
 
@@ -25,5 +23,5 @@ int built_ins(char *command)
 		return (0);
 	}
 
-	return (-1)
+	return (-1);
 }
