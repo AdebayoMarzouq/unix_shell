@@ -16,6 +16,7 @@ void free2DArray(char **arr)
 		return;
 	}
 
+	i = 0;
 	while (arr[i])
 	{
 		free(arr[i]);
