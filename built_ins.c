@@ -13,12 +13,9 @@ void make_exit(void)
  *
 */
 
-void print_env(char *env_var)
+void print_env()
 {
 	int i;
-
-	if (env_var == NULL)
-		return;
 
 	/** Iterate through `environ` to print all environment variables */
 	for (i = 0; environ[i]; i++)
