@@ -6,16 +6,25 @@
 
 int make_exit(void)
 {
-	printf("Exiting.......");
-	return (0);
+	exit(1);
 }
 
 /**
  *
 */
 
-int print_env(void)
+int print_env(char *env_var)
 {
-	printf("Printing env......");
-	return (0);
+	int i;
+
+	if (name == NULL)
+		return NULL;
+
+	/** Iterate through `environ` to print all environment variables */
+	for (i = 0; environ[i]; i++)
+	{
+		_puts(environ[i]);
+		_putchar('\0');
+	}
+	return (NULL);
 }
