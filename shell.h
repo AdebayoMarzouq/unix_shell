@@ -15,7 +15,8 @@ void prompt(char *sym);
 int parse_str(const char *src, const char delimiter, char ***dest_arr, int *dest_len);
 void exec(char **args);
 char *_getenv(const char *name);
-int append_str(char **new_str, ...);
+int build_path(char **new_str, char *path, char *name);
 int run_command(char *command, char **args, char **env_vars);
+int built_ins(char *command);
 
 #endif

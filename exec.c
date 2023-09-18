@@ -39,7 +39,7 @@ void exec(char **args)
 		token = strtok(path, ":");
 		while (token)
 		{
-			append_str(&full_path, token, "/", args[0], NULL);
+			build_path(&full_path, token, args[0]);
 			if (stat(full_path, &info) == 0)
 			{
 				if (access(full_path, X_OK) == 0)
