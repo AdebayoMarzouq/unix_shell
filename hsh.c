@@ -41,7 +41,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 			free(cmd_args);
 		}
 		else
-			puts("Error: could not parse string")
+			puts("Error: could not parse string");
 		/** create cleanups here */
 	} while (1);
 	/** Free 2D array here */
