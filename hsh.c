@@ -28,7 +28,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		cmd_args = parse_str(line, ' ');
 		if (cmd_args)
 		{
-			if (cmd_args[0] && strcmp(cmd_args, "exit") == 0)
+			if (cmd_args[0] && strcmp(cmd_args[0], "exit") == 0)
 			{
 				free2DArray(cmd_args);
 				free(line);
