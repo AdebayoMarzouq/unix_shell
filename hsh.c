@@ -32,12 +32,12 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	} while (1);
 	/** Free 2D array here */
 	i = 0;
-	while (argv[i])
+	while (cmd_args[i])
 	{
-		free(argv[i]);
+		free(cmd_args[i]);
 		i++;
 	}
-	free(argv);
+	free(cmd_args);
 	free(line);
 	return (0);
 }
