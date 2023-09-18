@@ -11,7 +11,7 @@
 
 int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	char *line = NULL, **cmd_args == NULL;
+	char *line = NULL, **cmd_args = NULL;
 	size_t len = 0;
 	ssize_t bytes_read = 0;
 
