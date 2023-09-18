@@ -46,7 +46,7 @@ char **parse_str(const char *src, const char delimiter)
 		{
 			word_length = i - word_start;
 			dest_arr[word_index] = malloc((word_length + 1) * sizeof(char));
-			if (!dest_arr[word_index])
+			if (!(dest_arr[word_index]))
 			{
 				for (j = 0; j < word_index; j++)
 					free(dest_arr[j]);
