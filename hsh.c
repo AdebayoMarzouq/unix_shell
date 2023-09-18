@@ -14,7 +14,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	char *line = NULL, **cmd_args;
 	size_t len = 0;
 	ssize_t bytes_read = 0;
-	int i, cmd_count;
+	int i;
 
 	do
 	{
@@ -27,7 +27,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 			/** Error function with exit here*/
 			break;
 		}
-		parse_str(line, ' ', &cmd_args, &cmd_count);
+		cmd_args = parse_str(line, ' ');
 		exec(cmd_args);
 	} while (1);
 	/** Free 2D array here */

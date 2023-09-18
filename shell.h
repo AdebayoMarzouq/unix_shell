@@ -12,7 +12,7 @@
 extern char **environ;
 
 void prompt(char *sym);
-int parse_str(const char *src, const char delimiter, char ***dest_arr, int *dest_len);
+char **parse_str(const char *src, const char delimiter);
 void exec(char **args);
 char *_getenv(const char *name);
 int build_path(char **new_str, char *path, char *name);
