@@ -20,7 +20,7 @@ char **parse_str(const char *src, const char delimiter)
 	/** Assign memory space Arr[index] to length of string */
 	/** Free memory space allocated as necessary if error occurs*/
 	int len, i, j, words_no = 0, word_start, word_index, word_length;
-	char **dest_arr == NULL;
+	char **dest_arr = NULL;
 
 	if (!src)
 		return (NULL);
