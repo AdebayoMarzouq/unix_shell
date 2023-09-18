@@ -20,9 +20,10 @@ int run_command(char *command, char **args, char **env_vars);
 int check_builtin(char *command);
 void free2DArray(char **arr);
 void make_exit(void);
-void print_env(char *env_var);
+void print_env();
 void _puts(char *str);
 int _putchar(char c);
 void error_message(char *s, char *cmd);
+void print_number(int n);
 
 #endif
