@@ -22,21 +22,22 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		bytes_read = getline(&line, &len, stdin);
 		if (bytes_read == -1)
 		{
-			printf("Exiting shell....\n");
 			free(line);
 			exit(1);
 		}
 		cmd_args = parse_str(line, ' ');
 		if (cmd_args)
 		{
-			if (check_builtin(cmd_args[0]))
+			if (cmd_args[0] && strcmp(cmd_args, "exit") == 0)
 			{
-				exec(cmd_args);
+				free2DArray(cmd_args);
+				free(line);
+				exit(1);
 			}
+			else if (check_builtin(cmd_args[0]))
+				exec(cmd_args);
 			free2DArray(cmd_args);
 		}
-		else
-			puts("Error: could not parse string");
 	}
 	return (0);
 }

@@ -2,15 +2,6 @@
 
 /**
  *
- */
-
-void make_exit(void)
-{
-	exit(1);
-}
-
-/**
- *
 */
 
 void print_env()
