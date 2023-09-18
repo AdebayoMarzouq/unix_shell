@@ -13,7 +13,7 @@ int check_builtin(char *command)
 	if (strcmp("exit", command) == 0)
 	{
 		/** run exit here */
-		make_exit()
+		make_exit();
 		return (0);
 	}
 
