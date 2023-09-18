@@ -14,7 +14,6 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	char *line = NULL, **cmd_args;
 	size_t len = 0;
 	ssize_t bytes_read = 0;
-	int i;
 
 	while (1)
 	{
