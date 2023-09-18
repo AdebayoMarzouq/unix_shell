@@ -16,7 +16,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	ssize_t bytes_read = 0;
 	int i;
 
-	do
+	while (1)
 	{
 		if (isatty(STDIN_FILENO))
 			prompt(NULL);
@@ -34,23 +34,21 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 			i = 0;
 			while (cmd_args[i])
 			{
-				puts("Ran frees");
 				free(cmd_args[i]);
 				i++;
 			}
 			free(cmd_args);
 		}
 		else
-			puts("Error: could not parse string")
+			puts("Error: could not parse string");
 		/** create cleanups here */
-	} while (1);
+	}
 	/** Free 2D array here */
 	if (cmd_args)
 	{
 		i = 0;
 		while (cmd_args[i])
 		{
-			puts("Ran frees");
 			free(cmd_args[i]);
 			i++;
 		}
