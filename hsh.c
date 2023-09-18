@@ -28,7 +28,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 			break;
 		}
 		parse_str(line, ' ', &cmd_args, &cmd_count);
-		exec(argv);
+		exec(cmd_args);
 	} while (1);
 	/** Free 2D array here */
 	i = 0;
