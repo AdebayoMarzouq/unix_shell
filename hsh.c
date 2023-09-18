@@ -11,10 +11,10 @@
 
 int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	char *line = NULL;
+	char *line = NULL, **cmd_args;
 	size_t len = 0;
 	ssize_t bytes_read = 0;
-	int i;
+	int i, cmd_count;
 
 	do
 	{
@@ -27,12 +27,17 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 			/** Error function with exit here*/
 			i = 0;
 			while (argv[i])
+			{
 				free(argv[i]);
+				i++;
+			}
 			free(argv);
 			free(line);
+			i = 0;
+			while (argv)
 			exit(1);
 		}
-		parse_str(line, ' ', &argv, &argc);
+		parse_str(line, ' ', &cmd_args, &cmd_count);
 		exec(argv);
 	} while (1);
 	/** Free 2D array here */
