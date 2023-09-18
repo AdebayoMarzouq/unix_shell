@@ -31,29 +31,14 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		if (cmd_args)
 		{
 			exec(cmd_args);
-			i = 0;
-			while (cmd_args[i])
-			{
-				free(cmd_args[i]);
-				i++;
-			}
-			free(cmd_args);
+			free2DArray(cmd_args);
 		}
 		else
 			puts("Error: could not parse string");
 		/** create cleanups here */
 	}
 	/** Free 2D array here */
-	if (cmd_args)
-	{
-		i = 0;
-		while (cmd_args[i])
-		{
-			free(cmd_args[i]);
-			i++;
-		}
-		free(cmd_args);
-	}
+	free2DArray(cmd_args);
 	free(line);
 	return (0);
 }
