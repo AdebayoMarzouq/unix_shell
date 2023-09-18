@@ -13,7 +13,7 @@ void free2DArray(char **arr)
 	if (!arr[0])
 	{
 		free(arr);
-		return
+		return;
 	}
 
 	while (arr[i])
