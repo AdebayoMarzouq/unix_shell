@@ -44,8 +44,11 @@ void exec(char **args)
 			{
 				if (access(full_path, X_OK) == 0)
 				{
-					/** fork process here and handle all the nonsense here */
 					run_command(full_path, args, NULL);
+					{
+						free(path);
+						free(full_path);
+					}
 					return;
 				}
 				else
