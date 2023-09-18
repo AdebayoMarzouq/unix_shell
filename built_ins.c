@@ -4,7 +4,7 @@
  *
  */
 
-int make_exit(void)
+void make_exit(void)
 {
 	exit(1);
 }
@@ -13,12 +13,12 @@ int make_exit(void)
  *
 */
 
-int print_env(char *env_var)
+void print_env(char *env_var)
 {
 	int i;
 
-	if (name == NULL)
-		return NULL;
+	if (env_var == NULL)
+		return;
 
 	/** Iterate through `environ` to print all environment variables */
 	for (i = 0; environ[i]; i++)
@@ -26,5 +26,5 @@ int print_env(char *env_var)
 		_puts(environ[i]);
 		_putchar('\0');
 	}
-	return (NULL);
+	return;
 }
