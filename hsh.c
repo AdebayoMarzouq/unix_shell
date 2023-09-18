@@ -23,7 +23,6 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		if (bytes_read == -1)
 		{
 			printf("Exiting shell....\n");
-			/** Error function with exit here*/
 			free(line);
 			exit(1);
 		}
@@ -35,10 +34,6 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		}
 		else
 			puts("Error: could not parse string");
-		/** create cleanups here */
 	}
-	/** Free 2D array here */
-	free2DArray(cmd_args);
-	free(line);
 	return (0);
 }
