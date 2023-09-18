@@ -29,6 +29,14 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		}
 		cmd_args = parse_str(line, ' ');
 		exec(cmd_args);
+		i = 0;
+		while (cmd_args[i])
+		{
+			puts("Ran frees");
+			free(cmd_args[i]);
+			i++;
+		}
+		free(cmd_args);
 		/** create cleanups here */
 	} while (1);
 	/** Free 2D array here */

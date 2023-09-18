@@ -57,8 +57,7 @@ void exec(char **args)
 			free(full_path);
 			token = strtok(NULL, ":");
 		}
-		free(path);
-		free(full_path);
 		perror("Invalid command path");
+		free(path);
 	}
 }
