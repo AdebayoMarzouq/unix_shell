@@ -1,7 +1,12 @@
 #include "shell.h"
 
 /**
+ * build_path - concatenates path
+ * @new_str: pointer to the new string  2D array
+ * @path: path env variable
+ * @name: name of the command
  *
+ * Return: 0 if successful else -1
  */
 
 int build_path(char **new_str, char *path, char *name)
@@ -11,6 +16,7 @@ int build_path(char **new_str, char *path, char *name)
 	if (!new_str || !path || !name)
 		return (-1);
 
+	/** Allocated memory to arguments array */
 	*new_str = malloc(sizeof(*new_str) * len);
 	if (!(*new_str))
 	{
@@ -42,3 +48,4 @@ int build_path(char **new_str, char *path, char *name)
 	}
 	return (0);
 }
+

@@ -1,7 +1,10 @@
 #include "shell.h"
 
 /**
+ * free2DArray - frees a 2D array
+ * @arr: pointer to the 2D array
  *
+ * Return: has no return value
 */
 
 void free2DArray(char **arr)

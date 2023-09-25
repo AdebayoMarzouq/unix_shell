@@ -1,7 +1,9 @@
 #include "shell.h"
 
 /**
+ * print_env - prints enviroment variables
  *
+ * Return: has no return value
 */
 
 void print_env()

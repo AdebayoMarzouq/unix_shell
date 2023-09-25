@@ -16,3 +16,4 @@ void prompt(char *sym)
 	printf("%s", prompt);
 	fflush(stdout);
 }
+
